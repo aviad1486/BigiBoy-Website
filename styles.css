@@ -70,71 +70,53 @@ footer {
     text-align: center;
 }
 
-/* Slideshow Container */
-.slideshow-container {
-    position: relative;
-    max-width: 80%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+/* Events Section */
+#events {
+    padding: 2em;
 }
 
-/* Slides */
-.slide {
-    display: none;
-    text-align: center;
+#events h2 {
+    text-align: right; /* Aligns the title to the right */
+    padding-right: 20px; /* Adds some spacing from the right edge */
 }
 
-.slide img, .slide video {
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center; /* Ensures media remains centered */
+}
+
+/* Each Media Item */
+.gallery-item {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Force images and videos to have the same dimensions */
+.gallery img, .gallery video {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Adjust this value if needed */
+    object-fit: contain; /* Ensures the entire media is visible without cropping */
     border-radius: 10px;
 }
 
-/* Navigation Buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 20px;
-    transition: 0.3s ease;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-/* Fade Animation */
-.fade {
-    animation: fadeEffect 1s ease-in-out;
-}
-
-@keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+.gallery-item:hover {
+    transform: scale(1.05);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .slideshow-container {
-        max-width: 95%;
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
-
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
