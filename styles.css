@@ -70,8 +70,90 @@ footer {
     text-align: center;
 }
 
-/* Events Section */
+#home {
+    text-align: center;
+    padding: 3em;
+}
 
+#home h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700; /* זהב */
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 20px;
+    color: white;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* About Section */
+#about {
+    padding: 2em;
+}
+
+/* Layout: Aligns text and image in a row */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between elements */
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Right Text (First Teacher) */
+.about-text.right-text {
+    position: absolute;
+    right: 50px;
+    width: 30%; /* Adjust width for balance */
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Left Text (Second Teacher) */
+.about-text.left-text {
+    position: absolute;
+    left: 50px;
+    width: 30%;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Image Styling */
+.about-image img {
+    height:auto;
+    width: 350px; 
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        text-align: center;
+    }
+
+    .about-text {
+        width: 80%;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 200px; /* Adjust image size for mobile */
+    }
+}
+
+/* Events Section */
 #events {
     padding: 2em;
 }
@@ -143,7 +225,7 @@ footer {
 }
 
 .contact-item img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.5); /* Slight zoom effect on hover */
 }
 
 .contact-item p {
