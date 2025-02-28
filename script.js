@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Contact Section - Icon Hover Effect (Optional)
+    // Contact Section - Icon Hover Effect 
     const contactIcons = document.querySelectorAll(".contact-item img");
 
     contactIcons.forEach(icon => {
@@ -29,18 +29,5 @@ document.addEventListener("DOMContentLoaded", () => {
             icon.style.transform = "scale(1)";
         });
     });
-
-    // Event Section - Auto Play Videos on Hover (Optional)
-    const videos = document.querySelectorAll(".gallery-item video");
-
-    videos.forEach(video => {
-        video.addEventListener("mouseenter", () => {
-            video.play();
-        });
-        video.addEventListener("mouseleave", () => {
-            video.pause();
-        });
-    });
-
-    console.log("script.js loaded successfully!");
 });
+

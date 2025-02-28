@@ -225,10 +225,6 @@ footer {
     transition: transform 0.3s ease-in-out;
 }
 
-.contact-item img:hover {
-    transform: scale(1.5); /* Slight zoom effect on hover */
-}
-
 .contact-item p {
     margin-top: 10px;
     font-size: 18px;
